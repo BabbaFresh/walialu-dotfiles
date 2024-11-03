@@ -12,6 +12,7 @@ SOURCES_FILES=(
   "editor"
   "aliases"
   "functions"
+  "carapace"
 )
 
 for file in "${SOURCES_FILES[@]}"; do
