@@ -1,8 +1,27 @@
-#:schema https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json
-
-version = 2
-final_space = true
 console_title_template = '{{ .Shell }} in {{ .Folder }}'
+version = 3
+final_space = true
+
+[palette]
+  black = '#262B44'
+  blue = '#4B95E9'
+  green = '#59C9A5'
+  grey = '#6C6C6C'
+  orange = '#F07623'
+  red = '#D81E5B'
+  white = '#E0DEF4'
+  yellow = '#F3AE35'
+
+[secondary_prompt]
+  template = '❯❯ '
+  foreground = 'magenta'
+  background = 'transparent'
+
+[transient_prompt]
+  template = '❯ '
+  foreground = ''
+  background = 'transparent'
+  foreground_templates = ['{{ if gt .Code 0 }}red{{ end }}', '{{ if eq .Code 0 }}magenta{{ end }}']
 
 [[blocks]]
   type = 'prompt'
@@ -10,21 +29,21 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
   newline = true
 
   [[blocks.segments]]
-    type = 'path'
     style = 'plain'
-    background = 'transparent'
-    foreground = 'blue'
     template = '{{ .Path }}'
+    foreground = 'blue'
+    background = 'transparent'
+    type = 'path'
 
     [blocks.segments.properties]
       style = 'full'
 
   [[blocks.segments]]
-    type = 'git'
     style = 'plain'
-    background = 'transparent'
-    foreground = 'p:grey'
     template = ' {{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }} <cyan>{{ if gt .Behind 0 }}↓{{ end }}{{ if gt .Ahead 0 }}↑{{ end }}</>'
+    foreground = 'p:grey'
+    background = 'transparent'
+    type = 'git'
 
     [blocks.segments.properties]
       branch_icon = ''
@@ -36,15 +55,15 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
   overflow = 'hidden'
 
   [[blocks.segments]]
-    type = 'executiontime'
     style = 'plain'
-    background = 'transparent'
-    foreground = 'yellow'
     template = '{{ .FormattedMs }}'
+    foreground = 'yellow'
+    background = 'transparent'
+    type = 'executiontime'
 
     [blocks.segments.properties]
-      threshold = 5000
       style = 'austin'
+      threshold = 5000
 
 [[blocks]]
   type = 'prompt'
@@ -52,34 +71,9 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
   newline = true
 
   [[blocks.segments]]
-    type = 'text'
     style = 'plain'
-    foreground_templates = [
-      '{{ if gt .Code 0 }}red{{ end }}',
-      '{{ if eq .Code 0 }}magenta{{ end }}',
-    ]
-    background = 'transparent'
     template = '❯'
-
-[transient_prompt]
-  foreground_templates = [
-    '{{ if gt .Code 0 }}red{{ end }}',
-    '{{ if eq .Code 0 }}magenta{{ end }}',
-  ]
-  background = 'transparent'
-  template = '❯ '
-
-[secondary_prompt]
-  background = 'transparent'
-  foreground = 'magenta'
-  template = '❯❯ '
-
-[palette]
-  black = '#262B44'
-  blue = '#4B95E9'
-  green = '#59C9A5'
-  orange = '#F07623'
-  red = '#D81E5B'
-  white = '#E0DEF4'
-  yellow = '#F3AE35'
-  grey = '#6C6C6C'
+    foreground = ''
+    background = 'transparent'
+    type = 'text'
+    foreground_templates = ['{{ if gt .Code 0 }}red{{ end }}', '{{ if eq .Code 0 }}magenta{{ end }}']
