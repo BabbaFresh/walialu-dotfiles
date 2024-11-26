@@ -1,4 +1,4 @@
-alias ls='exa'
+alias ls='eza --icons=always'
 
 # I <3 Neovim
 alias vim=nvim
@@ -7,7 +7,7 @@ alias vi=nvim
 # easier sudo with env
 alias 'sudoo'='sudo -E'
 
-alias 'll'='eza -la'
+alias 'll'='ls -la'
 alias '..'='cd ..'
 alias 'gopen'='xdg-open'
 
