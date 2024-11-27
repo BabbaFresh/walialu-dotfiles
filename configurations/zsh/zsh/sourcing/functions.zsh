@@ -1,3 +1,11 @@
+# tmux is love, tmux is life
+# attach to a new or existing tmux session
+# Use default session name (0), if not specified
+tmuxa() {
+  local session_name="${1:-0}" # Use the first argument, or 0 if none provided
+  tmux new-session -A -s "$session_name"
+}
+
 ,() {
   local fdres=$(fd --type d --hidden --exclude '.git' --exclude '.npm' "$@")
   if [ -z "$fdres" ]; then
