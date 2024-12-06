@@ -12,3 +12,10 @@ export PATH=$HOME/.bin:/usr/local/bin:/usr/local/go/bin:$GOPATH/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
+
+# bun completions
+[ -s "/home/marco/.bun/_bun" ] && source "/home/marco/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

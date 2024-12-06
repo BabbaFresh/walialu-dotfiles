@@ -161,6 +161,14 @@ else
   curl https://pyenv.run | bash
 fi
 
+# Install bun
+if [ -d ~/.bun ]; then
+  echo "📦 bun already installed"
+  echo "💡 Skipping bun installation"
+else
+  curl -fsSL https://bun.sh/install | bash
+fi
+
 # Install shazam.sh and symlink dotfiles
 if [ -f /usr/bin/shazam ]; then
   echo "📦 shazam.sh already installed"
