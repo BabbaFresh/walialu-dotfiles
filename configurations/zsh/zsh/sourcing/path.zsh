@@ -1,3 +1,6 @@
+# Node Modules
+export PATH=$HOME/.node_modules/bin:$PATH
+
 # Cargo path
 export PATH=$HOME/.cargo/bin:$PATH
 
