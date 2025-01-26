@@ -13,6 +13,7 @@ SOURCES_FILES=(
   "aliases"
   "functions"
   "carapace"
+  "bun"
 )
 
 for file in "${SOURCES_FILES[@]}"; do
