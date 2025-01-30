@@ -32,6 +32,7 @@ sudo apt install -y \
   cargo \
   curl \
   curl \
+  direnv \
   eza \
   fd-find \
   flameshot \

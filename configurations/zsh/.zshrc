@@ -154,7 +154,5 @@ tmuxa() {
   fi
 }
 
-source-dotenv() {
-  [ ! -f .env ] || export $(grep -v '^#' .env | xargs)
-}
-
+# https://direnv.net/docs/hook.html#zsh
+eval "$(direnv hook zsh)"
