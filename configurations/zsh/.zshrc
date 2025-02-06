@@ -82,9 +82,6 @@ fi
 
 eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh/default.toml)"
 
-# Node Modules
-export PATH=$HOME/.node_modules/bin:$PATH
-
 # Cargo path
 export PATH=$HOME/.cargo/bin:$PATH
 
@@ -160,3 +157,8 @@ eval "$(direnv hook zsh)"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Node Modules
+# This neeeds to come after nvm
+# so that it always prefers the local version
+export PATH="node_modules/.bin:$PATH"
