@@ -61,17 +61,13 @@ fi
 
 source "$ZINIT_HOME/zinit.zsh"
 
-# lazy load nvm
-export NVM_LAZY_LOAD=true
-
 zinit wait lucid for \
   zdharma-continuum/fast-syntax-highlighting \
   zdharma-continuum/history-search-multi-word \
   blockf \
   zsh-users/zsh-completions \
   atload"bindkey '^n' autosuggest-accept" \
-  zsh-users/zsh-autosuggestions \
-  lukechilds/zsh-nvm
+  zsh-users/zsh-autosuggestions
 
 zstyle :plugin:history-search-multi-word reset-prompt-protect 1
 
