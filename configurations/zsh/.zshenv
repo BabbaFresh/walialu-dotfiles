@@ -4,3 +4,6 @@ export PYENV_ROOT="$HOME/.pyenv"
 eval "$(pyenv init -)"
 
 [[ -d $HOME/.local/bin ]] && export PATH="$HOME/.local/bin:$PATH"
+
+# rustup
+. "$HOME/.cargo/env"
