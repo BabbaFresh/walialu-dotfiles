@@ -52,3 +52,8 @@ configurations:
     files:
       - source: .ssh/config
         destination: $HOME/.ssh/config
+  # Zana 🌈 package manager 📦 configuration
+  - name: zana
+    files:
+      - source: zana
+        destination: $HOME/.config/zana
