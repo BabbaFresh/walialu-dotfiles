@@ -17,8 +17,6 @@ configurations:
   # zsh configuration
   - name: zsh
     files:
-      - source: zsh
-        destination: $HOME/.config/zsh
       - source: .zshrc
         destination: $HOME/.zshrc
       - source: .zshenv
