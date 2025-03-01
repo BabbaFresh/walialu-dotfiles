@@ -22,7 +22,7 @@
   # git backup
   bak = "!git add -A && git commit --amend --reuse-message=HEAD"
   # add all files, commit with latest message, and push force-with-lease
-  fwl = "!git add -A && git commit --amend --reuse-message=HEAD --reset-author && git push --force-with-lease"
+  pwl = "!git add -A && git commit --amend --reuse-message=HEAD --reset-author && git push --force-with-lease"
   # git add
   a = add
   # git add
