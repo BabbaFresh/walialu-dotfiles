@@ -1,5 +1,4 @@
-CONFIG_HOME="$HOME/.config/zsh"
-SOURCE_DIR="$CONFIG_HOME/sourcing"
+autoload -U +X compinit && compinit
 
 # Make alt + combo work in tmux
 bindkey -e
@@ -73,7 +72,7 @@ zstyle :plugin:history-search-multi-word reset-prompt-protect 1
 
 # Install oh-my-posh, if not already installed
 if ! command -v oh-my-posh &> /dev/null; then
-  curl -s https://ohmyposh.dev/install.sh | sudo bash -s
+  curl -s https://ohmyposh.dev/install.sh | bash -s
 fi
 
 eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh/default.toml)"
