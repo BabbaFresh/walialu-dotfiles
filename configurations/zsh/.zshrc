@@ -45,7 +45,7 @@ setopt HIST_IGNORE_SPACE
 # Record time of command in history
 setopt EXTENDED_HISTORY
 
-export CARAPACE_BRIDGES='zsh,fish,bash,inshellisense' # optional
+export CARAPACE_BRIDGES='zsh,bash,inshellisense' # optional
 zstyle ':completion:*:git:*' group-order 'main commands' 'alias commands' 'external commands'
 source <(carapace _carapace)
 
@@ -78,19 +78,13 @@ fi
 eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh/default.toml)"
 
 # Cargo path
-export PATH=$HOME/.cargo/bin:$PATH
+export PATH="$HOME/.cargo/bin:$PATH"
 
 # Go path
-export GOPATH=$HOME/go
-
-# Lua Language Server
-export PATH=$HOME/.lua-language-server/bin:$PATH
+export GOPATH="$HOME/go"
 
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:/usr/local/go/bin:$GOPATH/bin:$PATH
-
-# Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
+export PATH="$HOME/bin:/usr/local/bin:/usr/local/go/bin:$GOPATH/bin:$PATH"
 
 # bun completions
 [ -s "/home/marco/.bun/_bun" ] && source "/home/marco/.bun/_bun"
@@ -159,3 +153,16 @@ export NVM_DIR="$HOME/.nvm"
 export PATH="node_modules/.bin:$PATH"
 
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/gcr/ssh"
+
+# Google Cloud CLI
+export PATH="/opt/google-cloud-cli/bin:$PATH"
+
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+[[ -d $HOME/.local/bin ]] && export PATH="$HOME/.local/bin:$PATH"
+
+# rustup
+. "$HOME/.cargo/env"
