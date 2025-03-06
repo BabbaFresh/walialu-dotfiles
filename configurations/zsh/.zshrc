@@ -157,3 +157,5 @@ export NVM_DIR="$HOME/.nvm"
 # This neeeds to come after nvm
 # so that it always prefers the local version
 export PATH="node_modules/.bin:$PATH"
+
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/gcr/ssh"
