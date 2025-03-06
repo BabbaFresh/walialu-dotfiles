@@ -1,5 +1,4 @@
-Gorilla Moe's Ubuntu Setup Files
-================================
+# Gorilla Moe's Manjaro Linux Setup Files
 
 This is my 🦍🍌 Linux 🐧 setup ♻️ repository.
 
