@@ -3,6 +3,14 @@ autoload -U +X compinit && compinit
 # Make alt + combo work in tmux
 bindkey -e
 
+# Keybindings
+## Home key
+bindkey '\e[1~'  beginning-of-line
+## End key
+bindkey '\e[4~'  end-of-line
+## Delete key
+bindkey '\e[3~'  delete-char
+
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
